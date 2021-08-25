@@ -414,15 +414,19 @@ class Model():
 
         for i in range(5):
             drums_file = os.listdir("./TechnoTrance/Drums/"+str(i))
+            drums_file.remove('.gitignore')
             drums_list.append("./TechnoTrance/Drums/"+ str(i) + "/" +  random.choice(drums_file))
 
             bass_file = os.listdir("./TechnoTrance/Bass/"+str(i))
+            bass_file.remove('.gitignore')
             bass_list.append("./TechnoTrance/Bass/"+ str(i) + "/" +  random.choice(bass_file))
 
             synth_file = os.listdir("./TechnoTrance/Synth/"+str(i))
+            synth_file.remove('.gitignore')
             synth_list.append("./TechnoTrance/Synth/"+ str(i) + "/" +  random.choice(synth_file))
 
             sequence_file = os.listdir("./TechnoTrance/Sequence/"+str(i))
+            sequence_file.remove('.gitignore')
             sequence_list.append("./TechnoTrance/Sequence/"+ str(i) + "/" +  random.choice(sequence_file))
 
         random_sound_list.append(drums_list)
