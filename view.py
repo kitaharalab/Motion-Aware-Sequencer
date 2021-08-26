@@ -182,7 +182,7 @@ class View(tk.Frame):
         read_button.grid(row=4,column=0, padx=padx, pady=pady)
         #キャンセルボタン
         cancel_button = tk.Button(
-            analysis_frame, text="cansel", width=button_width,command=self._cancelClicked)
+            analysis_frame, text="cancel", width=button_width,command=self._cancelClicked)
         cancel_button.grid(row=4,column=1, padx=padx, pady=pady)
         #反映ボタン
         reflect_button = tk.Button(
