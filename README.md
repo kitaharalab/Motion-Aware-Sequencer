@@ -1,4 +1,5 @@
 ﻿# Motion-Aware Sequencer
+
 Motion-Aware Sequencer is a loop sequencer based on the excitement of the video.
 
 <!-- 1. Rename the files. -->
@@ -7,7 +8,9 @@ Motion-Aware Sequencer is a loop sequencer based on the excitement of the video.
 1. Clone the repository.
 1. If necessary, create and activate a new virtual environment.
 1. Install dependencies with requirements.txt.
-1. Purchase the following sound sources.
+1. Purchase the following sound sources.  
+  Sound PooL vol.1  
+  <https://www.ah-soft.com/soundpool/#rewire01>
 1. Copy the wav files to the target directory.
 
 |Directory|File|
@@ -361,9 +364,9 @@ Motion-Aware Sequencer is a loop sequencer based on the excitement of the video.
 ## Usage
 
 * `python main.py`
-* Click "open" button and select a mp4 file from the Movie directory.
-* Click "read" button to analyze the movie. When the analysis process is over, click "regrect" button.
-* Click "play" button to play the movie and composed music.
+* Click "open" and select a mp4 file from the Movie directory.
+* Click "read" to analyze the movie. When the analysis process is over, click "refrect".
+* Click "play" to play the movie and composed music.
 
 ### demo
 
