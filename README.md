@@ -2,6 +2,11 @@
 
 Motion-Aware Sequencer is a loop sequencer based on the excitement of the video.
 
+## Requirements
+
+* OS : Linux
+* Python 3.6
+
 <!-- 1. Rename the files. -->
 ## Installation
 
@@ -363,19 +368,39 @@ Motion-Aware Sequencer is a loop sequencer based on the excitement of the video.
 
 ## Usage
 
+### Activate pyenv
+
+* `source pyenv/bin/activate`
+
+### Run the program
+
 * `python main.py`
 * Click "open" and select a mp4 file from the Movie directory.
 * Click "read" to analyze the movie. When the analysis process is over, click "refrect".
 * Click "play" to play the movie and composed music.
 
-### demo
+#### Buttons
+
+**create**  Create music  
+**play**  Play selected movie & composed music  
+**pause**  Pause movie and music  
+**stop**  Stop movie and music  
+
+**no fix / fix**  Align/Do not align sound material  
+**nopart / auto**  Consider/Do not consider the composition of the music  
+
+**open**  Open the movie folder and select a movie
+**read**      Analyze selected movie
+**cancel**   Suspend movie analysis
+**reflect**   Reflect the analysis result of the movie on the curve
+
+### Deactivate pyenv
+
+* `deactivate`
+
+### Demo
 
 <http://www2.kthrlab.jp/members/yasusaka/index/index.html>
-
-## Requirements
-
-* OS : Linux
-* Python 3.6
 
 ## Authors
 
