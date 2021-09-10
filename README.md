@@ -11,10 +11,10 @@ Motion-Aware Sequencer is a loop sequencer based on the excitement of the video.
 * FFmpeg  
 <https://www.ffmpeg.org/>
 
-<!-- 1. Rename the files. -->
 ## Installation
 
 1. Clone the repository.
+1. If necessary, install python version management system and switch to python 3.6.
 1. If necessary, create and activate a new virtual environment.  
 **Create virtual environment**  
 `python -m venv [venv dir name]`  
