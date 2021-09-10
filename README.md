@@ -16,9 +16,9 @@ Motion-Aware Sequencer is a loop sequencer based on the excitement of the video.
 
 1. Clone the repository.
 1. If necessary, create and activate a new virtual environment.  
-Create virtual environment  
+**Create virtual environment**  
 `python -m venv [venv dir name]`  
-Activate virtual environment  
+**Activate virtual environment**  
 Linux `source [venv dir name]/bin/activate`  
 Windows `[venv dir name]\Scripts\activate`  
 
@@ -395,14 +395,14 @@ Windows `[venv dir name]\Scripts\activate`
 **no fix / fix**  Align/Do not align sound material  
 **nopart / auto**  Consider/Do not consider the composition of the music  
 
-**open**  Open the movie folder and select a movie
-**read**      Analyze selected movie
-**cancel**   Suspend movie analysis
+**open**  Open the movie folder and select a movie  
+**read**      Analyze selected movie  
+**cancel**   Suspend movie analysis  
 **reflect**   Reflect the analysis result of the movie on the curve
 
 ### Deactivate pyenv
 
-* `deactivate`
+`deactivate`
 
 ### Demo
 
