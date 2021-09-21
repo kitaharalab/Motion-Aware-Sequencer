@@ -400,7 +400,7 @@ Windows `[venv dir name]\Scripts\activate`
 **cancel**   Suspend movie analysis  
 **reflect**   Reflect the analysis result of the movie on the curve
 
-### Deactivate pyenv
+### Deactivate venv
 
 `deactivate`
 
