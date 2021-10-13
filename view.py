@@ -320,7 +320,7 @@ class View(tk.Frame):
 
     def displayVProgressOfAnalysis(self):
         """進捗バーの描画"""  
-        while self.model.movie_analysising:         
+        while self.model.movie_analysing:         
             self.movie_analysis_progress_bar["value"] = self.model.movie_analysis_progress
         print("finish progress")
           
@@ -457,14 +457,21 @@ class View(tk.Frame):
     def stopMusic(self):
         """楽曲の停止"""
         self.vlc_sound_player.stop()
-
+    
+    vlc_movie_player = None
     def playMovie(self):
         """動画の再生"""
         if self.movie_file_path != "":
-            #初期化
-            self.vlc_instance = vlc.Instance("--no-xlib")
-            self.vlc_movie_player = self.vlc_instance.media_player_new()
-            self.vlc_movie_player.set_xwindow(self.movie_frame.winfo_id())
+            if self.vlc_movie_player == None:
+                #初期化
+                if os.name == 'nt':
+                    self.vlc_instance = vlc.get_default_instance() #vlc.Instance()
+                    self.vlc_movie_player = self.vlc_instance.media_player_new()
+                    self.vlc_movie_player.set_hwnd(self.movie_frame.winfo_id())
+                else:
+                    self.vlc_instance = vlc.Instance("--no-xlib")
+                    self.vlc_movie_player = self.vlc_instance.media_player_new()
+                    self.vlc_movie_player.set_xwindow(self.movie_frame.winfo_id())
             #ファイル選択
             dirname = os.path.dirname(self.movie_file_path)
             filename = os.path.basename(self.movie_file_path)
@@ -472,6 +479,8 @@ class View(tk.Frame):
             self.vlc_movie_player.set_media(media)
             self.vlc_movie_player.audio_set_volume(0)
             self.vlc_movie_player.play()
+
+            time.sleep(1.5)
         else:
             print("not movie")
 
@@ -558,7 +567,7 @@ class View(tk.Frame):
 
     def _cancelClicked(self):
         """キャンセルボタンが押されたとき"""
-        self.model.movie_analysising = False    
+        self.model.movie_analysing = False    
         self.movie_analysis_progress_bar["value"] = 0
 
     def _reflectClicked(self):

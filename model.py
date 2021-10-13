@@ -502,7 +502,7 @@ class Model():
         self.motion_excitement_array = list()
         # 進捗の属性
         self.movie_analysis_progress = 0
-        self.movie_analysising = True
+        self.movie_analysing = True
     
     def analysisMovie(self,movie_file_path):
         """動画の分析を行う"""
@@ -522,7 +522,7 @@ class Model():
         # 動画の最後までをwhile文で回す
         entire_count = 0
         while (end_flag):
-            if self.movie_analysising == False:
+            if self.movie_analysing == False:
                 break
             # 次のフレームとの差分を計算する
             color_diff = cv2.absdiff(frame_next, frame_pre)
@@ -563,12 +563,12 @@ class Model():
             frame_pre = frame_next.copy()
             end_flag, frame_next = self.movie.read()
         
-        if self.movie_analysising:
-            self.movie_analysising = False 
+        if self.movie_analysing:
+            self.movie_analysing = False 
             self.calcMovieExcitement(self.movie, self.direction_cnt_array)
-            print("finish analysising movie")   
+            print("finish analysing movie")   
         else:
-            print("cancel analysising movie")
+            print("cancel analysing movie")
 
     def calcMovieExcitement(self,movie, direction_cnt_array):
         """動画の盛り上がり度を計算する"""
@@ -594,6 +594,7 @@ class Model():
                 e = 0
             else:
                 e = ((i / self.block_max))
+            print(e)
             self.motion_excitement_array.append((e))   
 
 
